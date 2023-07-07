@@ -2,6 +2,33 @@
 
 Bing Maps is releasing open building footprints around the world. We have detected **1.2B** buildings from Bing Maps imagery between 2014 and 2023 including Maxar, Airbus, and IGN France imagery. The data is freely available for download and use under ODbL. This dataset includes our [other releases](#will-there-be-more-data-coming-for-other-geographies). 
 
+## EOS-RS: How to use this
+#### Env on Gekko
+```commandline
+
+```
+
+#### Env on your own computer
+Set the env:
+```commandline
+conda create --name global_footprints
+conda activate global_footprints
+conda install pandas geopandas shapely tqdm fiona mercantile
+git clone https://github.com/earthobservatory/GlobalMLBuildingFootprints
+cd GlobalMLBuildingFootprints
+```
+#### Run the script
+
+Get building footproint based on a country:
+```commandline
+python scripts/get-building-fp.py -c Singpore
+```
+
+Get building footproint based on a geojson file (create from geojson.io):
+```commandline
+python scripts/get-building-fp.py -a <your_geojson.json>
+```
+
 ## Updates
 * 2023-06-05 - Combining [all building footprint releases](#will-there-be-more-data-coming-for-other-geographies) into one distribution. Total footprints: **1.2B**. Footprints with height: **174M**. Updated coverage map and associated features. Other data sources will remain unchanged. 
 * 2023-05-31 - added **49M** updated footprints and **10M** height attributes from Vexcel and Maxar imagery. Biggest contributions are Nigeria (18M), United States (9M), and Burkina Faso (7M).
