@@ -5,7 +5,9 @@ Bing Maps is releasing open building footprints around the world. We have detect
 ## EOS-RS: How to use this
 #### Env on Gekko
 ```commandline
-
+source /home/share/miniconda3/etc/profile.d/conda.sh
+conda activate global_footprints
+cd /home/share/insarscripts/GlobalMLBuildingFootprints
 ```
 
 #### Env on your own computer
